@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The personal portfolio of Lt. Suman — Associate Professor and Associate NCC Officer.">
+  <title>Lt. Suman | Educator & ANO, NCC</title>
+  <style>
+    :root{--navy:#142b45;--blue:#234a70;--coral:#f28f91;--cream:#fffaf7;--ink:#243447;--muted:#64748b;--line:#e6eaf0}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none} button,input{font:inherit} .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}.brand{font-family:Georgia,serif;font-size:1.7rem;font-style:italic;color:var(--navy);line-height:1.1}.brand small{display:block;font:500 .72rem/1.4 system-ui;color:var(--muted);font-style:normal;letter-spacing:.03em}
+    nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}nav a{font-size:.9rem;font-weight:650;color:#30445b}nav a:hover{color:#d66e76}.menu{display:none;background:none;border:0;font-size:1.5rem}
+    .hero{background:radial-gradient(circle at 80% 20%,#3c5b6b 0,#213b53 42%,#12283e 100%);color:white;overflow:hidden}
+    .hero-grid{min-height:390px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding-top:36px;padding-bottom:36px}
+    .eyebrow{color:#ffc0bd;text-transform:uppercase;font-weight:800;letter-spacing:.16em;font-size:.78rem}.hero h1{font:700 clamp(2.5rem,5vw,4.6rem)/1.05 Georgia,serif;margin:12px 0}.hero p{color:#e4edf5;max-width:560px}.quote{font:italic 1.15rem Georgia,serif;color:#ffe0de;margin:24px 0}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:11px 20px;font-weight:750;cursor:pointer;background:var(--coral);color:#172c42}.btn.secondary{background:transparent;color:white;border:1px solid #b7c8d8}.hero-art{min-height:300px;display:flex;align-items:center;justify-content:center;position:relative}.portrait-placeholder{width:min(310px,85%);aspect-ratio:4/5;border:1px solid #ffffff45;border-radius:48% 48% 22px 22px;background:linear-gradient(150deg,#dce6e5,#a4b9ba 55%,#5a7580);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#21384e;padding:24px;box-shadow:0 24px 60px #0003}.portrait-placeholder .star{font-size:4rem}.portrait-placeholder strong{font:700 1.4rem Georgia,serif}.portrait-placeholder span{font-size:.85rem;margin-top:8px}
+    section{padding:64px 0}.section-head{text-align:center;margin-bottom:32px}.section-head .eyebrow{color:#c96e75}.section-head h2{font:700 clamp(1.8rem,3vw,2.5rem) Georgia,serif;color:var(--navy);margin:5px 0}.section-head p{color:var(--muted);margin:0 auto;max-width:650px}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:38px;align-items:center}.profile-card{background:linear-gradient(145deg,#fce9e7,#e9f0f4);border-radius:24px;padding:28px;text-align:center;min-height:260px;display:flex;flex-direction:column;justify-content:center}.profile-card .icon{font-size:4rem}.profile-card h3{font:700 1.4rem Georgia,serif;color:var(--navy);margin:8px 0 0}.profile-card p{color:var(--muted);margin:4px 0}.about-copy h3{font:700 1.8rem Georgia,serif;color:var(--navy);margin:0 0 10px}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.fact{padding:14px;border:1px solid var(--line);border-radius:14px}.fact b{display:block;color:var(--navy);font-size:.9rem}.fact span{font-size:.82rem;color:var(--muted)}
+    .ncc{background:var(--cream)}.ncc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.tile{background:white;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 24px #1c35500a}.tile .emoji{font-size:2rem}.tile h3{font:700 1.2rem Georgia,serif;color:var(--navy);margin:10px 0 6px}.tile p{margin:0;color:var(--muted);font-size:.95rem}
+    .gallery-tools{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}.gallery-tools p{color:var(--muted);font-size:.9rem;margin:0}.upload-label{display:inline-flex;align-items:center;gap:8px}.upload-label input{display:none}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.photo{position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#e8eef3,#fbe5e3);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;color:#52657a}.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.photo .photo-caption{position:absolute;left:0;right:0;bottom:0;padding:12px;background:linear-gradient(transparent,#10253ddd);color:white;text-align:left;font-weight:700}.photo .remove{position:absolute;right:8px;top:8px;background:#fff;color:#26384c;border:0;border-radius:50%;width:32px;height:32px;cursor:pointer;z-index:2}.photo .remove:hover{background:#ffe0df}.empty{grid-column:1/-1;padding:36px;border:1px dashed #c8d2df;border-radius:16px;text-align:center;color:var(--muted)}
+    .achievement-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.achievement{text-align:center;padding:20px 12px;border:1px solid var(--line);border-radius:16px}.achievement .emoji{font-size:1.8rem}.achievement b{display:block;color:var(--navy);margin-top:8px}.achievement span{font-size:.85rem;color:var(--muted)}
+    .contact{background:#142b45;color:white}.contact .section-head h2{color:white}.contact .section-head p{color:#c8d7e5}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.contact-card{border:1px solid #ffffff2b;border-radius:18px;padding:24px}.contact-card h3{font:700 1.3rem Georgia,serif;margin-top:0}.contact-card p{color:#d5e1ec}.contact-link{display:block;margin:12px 0;color:#ffe0de;overflow-wrap:anywhere}.contact-form{display:grid;gap:12px}.contact-form input,.contact-form textarea{width:100%;padding:12px 14px;border:1px solid #ffffff35;background:#ffffff10;color:white;border-radius:10px}.contact-form input::placeholder,.contact-form textarea::placeholder{color:#c7d4e0}.contact-form textarea{min-height:110px;resize:vertical}.form-note{font-size:.82rem;color:#c7d4e0}
+    footer{background:#0b1d2d;color:#d0dce6;text-align:center;padding:20px;font-size:.88rem}footer span{color:#ffa8a9}
+    @media(max-width:760px){.nav{min-height:64px}.menu{display:block;color:var(--navy)}nav{display:none;position:absolute;left:0;right:0;top:64px;background:white;padding:18px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-grid{padding-top:48px}.hero-art{min-height:240px}.portrait-placeholder{width:230px}.ncc-grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:1fr}.achievement-grid{grid-template-columns:repeat(2,1fr)}section{padding:48px 0}}
+    @media(max-width:420px){.gallery{grid-template-columns:1fr}.hero h1{font-size:2.7rem}.gallery-tools{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">Lt. Suman<small>Educator&nbsp; | &nbsp;NCC Officer&nbsp; | &nbsp;Lifelong Learner</small></a>
+    <button class="menu" id="menuBtn" aria-label="Toggle navigation">☰</button>
+    <nav id="navLinks"><a href="#home">Home</a><a href="#about">About Me</a><a href="#ncc">NCC Journey</a><a href="#gallery">Gallery</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Welcome to my personal website</div>
+        <h1>Lt. Suman</h1>
+        <p class="hero-subtitle">Associate Professor &amp; Associate NCC Officer (ANO)</p>
+        <div class="quote">“Discipline builds character. Service builds a stronger nation.”</div>
+        <div class="actions"><a class="btn" href="#about">Know More About Me&nbsp; →</a><a class="btn secondary" href="#gallery">Explore Gallery</a></div>
+      </div>
+      <div class="hero-art"><div class="portrait-placeholder"><div class="star">✦</div><strong>Your photo goes here</strong><span>Replace this space with your favourite professional or NCC photograph.</span></div></div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="profile-card"><div class="icon">👩‍🏫</div><h3>Lt. Suman</h3><p>Educator • Associate NCC Officer</p><p>Patran, Punjab, India</p></div>
+      <div class="about-copy"><div class="eyebrow">A little introduction</div><h3>About Me</h3>
+        <p>Welcome to my personal space! I am an educator and Associate NCC Officer who values learning, leadership, discipline, teamwork, and service to society. Through teaching and NCC activities, I aim to encourage students to grow in confidence, character, and responsibility.</p>
+        <p>This website is a collection of my professional journey, NCC activities, achievements, and moments with colleagues, friends, and family.</p>
+        <div class="facts"><div class="fact"><b>Profession</b><span>Associate Professor</span></div><div class="fact"><b>Service</b><span>Associate NCC Officer</span></div><div class="fact"><b>Location</b><span>Punjab, India</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="ncc" id="ncc">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Service • Discipline • Leadership</div><h2>My NCC Journey</h2><p>NCC is about developing character, teamwork, leadership, and a spirit of service.</p></div>
+      <div class="ncc-grid">
+        <article class="tile"><div class="emoji">🎖️</div><h3>Training &amp; Camps</h3><p>Share memories and highlights from training camps, CATCs, workshops, and other NCC activities.</p></article>
+        <article class="tile"><div class="emoji">🇮🇳</div><h3>Parades &amp; Ceremonies</h3><p>Capture participation in national-day celebrations, parades, ceremonies, and college events.</p></article>
+        <article class="tile"><div class="emoji">🤝</div><h3>Cadet Mentoring</h3><p>Celebrate cadets’ teamwork, confidence, community service, and personal development.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Memories &amp; moments</div><h2>Photo Gallery</h2><p>Add NCC activities, college events, travel, celebrations, and social photographs.</p></div>
+      <div class="gallery-tools"><p id="galleryStatus">Your added photos are saved in this browser on this device.</p><label class="btn upload-label">＋ Add Photos<input id="photoInput" type="file" accept="image/*" multiple></label></div>
+      <div class="gallery" id="galleryGrid"><div class="empty">📷<br><b>Your gallery is ready</b><br>Choose “Add Photos” to select pictures from your device.</div></div>
+      <p class="form-note">Privacy tip: get permission before posting photos of cadets, students, or other people. Avoid publishing sensitive documents or personal details.</p>
+    </div>
+  </section>
+  <section id="achievements" class="ncc">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Milestones &amp; learning</div><h2>Achievements &amp; Highlights</h2><p>Use these cards to showcase qualifications, recognitions, training, and meaningful experiences.</p></div>
+      <div class="achievement-grid">
+        <div class="achievement"><div class="emoji">🎓</div><b>Teaching</b><span>Education &amp; mentoring</span></div>
+        <div class="achievement"><div class="emoji">🪖</div><b>NCC Service</b><span>ANO activities &amp; training</span></div>
+        <div class="achievement"><div class="emoji">🏅</div><b>Qualifications</b><span>Add your courses &amp; certificates</span></div>
+        <div class="achievement"><div class="emoji">🌱</div><b>Community</b><span>Service &amp; student development</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Say hello</div><h2>Contact Me</h2><p>For professional connections, educational collaboration, or NCC-related activities.</p></div>
+      <div class="contact-grid">
+        <div class="contact-card"><h3>Let's Connect</h3><p>You can add your preferred professional contact details here. Only publish details you are comfortable sharing publicly.</p><span class="contact-link">📍 Patran, Punjab, India</span><a class="contact-link" id="emailLink" href="mailto:">✉ Add your email address in the website code</a><p>Social profiles: add your own Instagram, Facebook, or LinkedIn links when ready.</p></div>
+        <div class="contact-card"><h3>Send a Message</h3><form class="contact-form" id="contactForm"><input id="senderName" required placeholder="Your name"><input id="senderEmail" type="email" required placeholder="Your email"><textarea id="senderMessage" required placeholder="Your message"></textarea><button class="btn" type="submit">Open Email App →</button><p class="form-note">This form opens your email app; it does not send or store messages on this website.</p></form></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© <span id="year"></span> Lt. Suman · Teaching with purpose · Serving with pride <span>♥</span></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const navLinks=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // Photo uploads are stored locally in this browser only (not published to all visitors).
+  const input=document.getElementById('photoInput');
+  const grid=document.getElementById('galleryGrid');
+  const status=document.getElementById('galleryStatus');
+  const STORAGE_KEY='ltSumanPortfolioPhotosV1';
+  let photos=[];
+  try { photos=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]'); } catch(e) { photos=[]; }
+  function renderPhotos(){
+    grid.innerHTML='';
+    if(!photos.length){grid.innerHTML='<div class="empty">📷<br><b>Your gallery is ready</b><br>Choose “Add Photos” to select pictures from your device.</div>';return;}
+    photos.forEach((p,i)=>{
+      const card=document.createElement('div');card.className='photo';
+      const img=document.createElement('img');img.src=p.data;img.alt=p.name||'Gallery photo';card.appendChild(img);
+      const cap=document.createElement('div');cap.className='photo-caption';cap.textContent=p.name||'A special memory';card.appendChild(cap);
+      const del=document.createElement('button');del.className='remove';del.type='button';del.textContent='×';del.title='Remove photo';del.setAttribute('aria-label','Remove photo');
+      del.addEventListener('click',()=>{photos.splice(i,1);savePhotos();renderPhotos();});card.appendChild(del);grid.appendChild(card);
+    });
+  }
+  function savePhotos(){
+    try{localStorage.setItem(STORAGE_KEY,JSON.stringify(photos));status.textContent='Saved in this browser on this device.';}
+    catch(e){status.textContent='Browser storage is full. Remove a few photos and try again.';}
+  }
+  input.addEventListener('change',async()=>{
+    const files=Array.from(input.files||[]).filter(f=>f.type.startsWith('image/'));
+    for(const file of files){
+      if(file.size>1.5*1024*1024){status.textContent='Skipped '+file.name+' (over 1.5 MB). Choose smaller images for local storage.';continue;}
+      const data=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file);});
+      photos.push({name:file.name.replace(/\.[^.]+$/,'').slice(0,70),data});
+    }
+    savePhotos();renderPhotos();input.value='';
+  });
+  document.getElementById('contactForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const email=''; // Add your public contact email here, e.g. 'suman@example.com'
+    if(!email){alert('Please add your email address in the website code first.');return;}
+    const subject=encodeURIComponent('Website message from '+document.getElementById('senderName').value);
+    const body=encodeURIComponent('From: '+document.getElementById('senderName').value+' ('+document.getElementById('senderEmail').value+')\n\n'+document.getElementById('senderMessage').value);
+    window.location.href='mailto:'+email+'?subject='+subject+'&body='+body;
+  });
+  renderPhotos();
+</script>
+</body>
+</html>
